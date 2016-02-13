@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="M:Common.StringUtils.IsValidEmail(System.String)">
+            <summary>
+            Проверить на валидность строки Email
+            </summary>
+            <param name="email">строка, содержащая Email</param>
+            <returns>true - да в строке валидный Email</returns>
+        </member>
+        <member name="M:Common.StringUtils.IsOnlyDigits(System.String)">
+            <summary>
+            Проверить на то что строка состоит только из цифр
+            </summary>
+            <param name="data">строка</param>
+            <returns>true - в строке только цифры</returns>
+        </member>
+        <member name="M:Common.StringUtils.IsGuid(System.String)">
+            <summary>
+            проверить на то что строка в фрмате GUID
+            </summary>
+            <param name="src">исходная строка</param>
+            <returns>Строка соответствует формату GUID</returns>
+        </member>
+        <member name="M:Common.StringUtils.SubstringBetween(System.String,System.Char,System.Char,System.Int32)">
+            <summary>
+            Get Substring between chars
+            </summary>
+            <param name="src">source string</param>
+            <param name="from">from char</param>
+            <param name="to">to chat</param>
+            <param name="skipFrames"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.StringUtils.SubstringFromChar(System.String,System.Char,System.Int32)">
+            <summary>
+            Get substring right after the char from
+            </summary>
+            <param name="src">source string</param>
+            <param name="from">from char</param>
+            <param name="skipCount">how many to skip chars first</param>
+            <returns></returns>
+        </member>
+        <member name="M:Common.Utils.GetNextDateByDayOfTheWeek(System.DateTime,System.DayOfWeek)">
+            <summary>
+            Взять следующую дату, указав день недели. Сегодняшняя дата считается
+            </summary>
+            <param name="nowDateTime">текущая дата</param>
+            <param name="dayOfWeek">день недели</param>
+            <returns>Дата дня недели</returns>
+        </member>
+        <member name="M:Common.Utils.AreSame(System.Collections.Generic.List{System.Byte},System.Byte[],System.Int32)">
+            <summary>
+            Проверить то, что последовательность левая начиная от indexOf равна последовательности search
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

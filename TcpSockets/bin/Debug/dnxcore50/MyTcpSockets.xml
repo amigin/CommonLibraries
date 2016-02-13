@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyTcpSockets</name>
+    </assembly>
+    <members>
+        <member name="P:MyTcpSockets.ServerTcpSocket`2.Count">
+            <summary>
+            Число активных соединений
+            </summary>
+        </member>
+        <member name="T:MyTcpSockets.ISocketNotifyer">
+            <summary>
+            Даём интерфейс службам, в которых хотим обработать момент коннекта и дисконнекта
+            </summary>
+        </member>
+        <member name="T:MyTcpSockets.ITcpSerializer">
+            <summary>
+            Интерфейс, который выдается сериалайзеру данных
+            </summary>
+        </member>
+        <member name="T:MyTcpSockets.ITcpService">
+            <summary>
+            Интерфейс, с помощью которого мы уведомляем класс потребителя информации о поступлении данных 
+            и даём интерфейс (SendDataToSocket) на обратную отправку данных
+            </summary>
+        </member>
+        <member name="M:MyTcpSockets.ITcpService.HandleDataFromSocket(System.Object)">
+            <summary>
+            Когда сокет получил данные и распарсил их в объект, 
+            вызывается этот метод, в котором мы обрабатываем полученные данные
+            </summary>
+            <param name="data">данные, которые получил сокет и распарсил биндер</param>
+        </member>
+        <member name="P:MyTcpSockets.ITcpService.SendDataToSocket">
+            <summary>
+            Метод, с помощью которого мы отправляем данные в сокет
+            </summary>
+        </member>
+        <member name="P:MyTcpSockets.ITcpService.ContextName">
+            <summary>
+            Имя контекста сокета (для логирования)
+            </summary>
+        </member>
+        <member name="M:MyTcpSockets.StreamExtentions.ReadPascalString(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Считать строку из сокета в Pascal формате. Первый байт - длина строки, остальное строка
+            </summary>
+            <param name="stream">Поток, из которого читаем строку</param>
+            <param name="encoding">Формат кодирования. По умолчанию: UTF-8</param>
+            <returns>Считанная строка</returns>
+        </member>
+        <member name="M:MyTcpSockets.StreamExtentions.ReadString(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Считать строку из потока в формате: 4 байта - длина строки и сама строка
+            </summary>
+            <param name="stream">Поток, из которого читается строка</param>
+            <param name="encoding">Формат кодирования. По умолчанию: UTF-8</param>
+            <returns>Полученная строка</returns>
+        </member>
+    </members>
+</doc>
