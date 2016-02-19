@@ -15,7 +15,7 @@ namespace Common.PasswordKeeping
         {
            var sha1Converter = SHA1.Create();
            var sha1 = sha1Converter.ComputeHash((password + salt).ToUtf8Bytes());
-            return Convert.ToBase64String(new byte[255]);
+            return Convert.ToBase64String(sha1);
         }
 
         public static void SetPassword(this IPasswordKeeping entity, string password)
